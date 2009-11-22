@@ -1,0 +1,11 @@
+DESCRIPTION="Open Sound Control implementation"
+HOMEPAGE="http://liblo.sourceforge.net/"
+SRC_URI="mirror://sourceforge/liblo/${P}.tar.gz"
+
+PATCH_URI="0.26-no-undefined.patch
+           0.26-vpath.patch"
+
+PKG_NAMES="liblo liblo7 liblo-devel"
+liblo_CONTENTS="usr/bin/*.exe usr/share/doc/"
+liblo7_CONTENTS="usr/bin/cyglo-7.dll"
+liblo_devel_CONTENTS="usr/include/ usr/lib/"

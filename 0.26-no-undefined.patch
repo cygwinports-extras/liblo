@@ -1,0 +1,11 @@
+--- origsrc/liblo-0.26/src/Makefile.am	2009-03-07 11:09:52.000000000 -0600
++++ src/liblo-0.26/src/Makefile.am	2009-11-21 22:44:00.339611100 -0600
+@@ -14,7 +14,7 @@ lib_LTLIBRARIES = liblo.la
+ liblo_la_CFLAGS = -Wall -I$(top_srcdir)
+ liblo_la_SOURCES = $(SOURCE_FILES)
+ liblo_la_LIBADD = -lpthread
+-liblo_la_LDFLAGS  = -export-dynamic -version-info @LO_SO_VERSION@
++liblo_la_LDFLAGS  = -export-dynamic -version-info @LO_SO_VERSION@ -no-undefined
+ 
+ noinst_PROGRAMS = testlo subtest
+ 
