@@ -1,5 +1,5 @@
 NAME="liblo"
-VERSION=0.26
+VERSION=0.28
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Open Sound Control implementation"
@@ -7,10 +7,10 @@ DESCRIPTION="liblo is a lightweight library that provides an easy to use
 implementation of the Open Sound Control protocol."
 HOMEPAGE="http://liblo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/liblo/${NAME}-${VERSION}.tar.gz"
-PATCH_URI="
-	0.26-no-undefined.patch
-	0.26-vpath.patch
-"
+#PATCH_URI="
+#	0.26-no-undefined.patch
+#	0.26-vpath.patch
+#"
 
 PKG_NAMES="liblo liblo7 liblo-devel"
 liblo_CATEGORY="Audio"
@@ -18,3 +18,5 @@ liblo_SUMMARY="${SUMMARY} (tools)"
 liblo_CONTENTS="usr/bin/*.exe usr/share/doc/"
 liblo7_CONTENTS="usr/bin/cyglo-7.dll"
 liblo_devel_CONTENTS="usr/include/ usr/lib/"
+
+MAKEOPTS+=" lt_windows=-no-undefined"
